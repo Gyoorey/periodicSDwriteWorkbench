@@ -7,6 +7,7 @@ C_SRCS += \
 ../Src/ADXL345.c \
 ../Src/Communication.c \
 ../Src/adc.c \
+../Src/auto_treshold.c \
 ../Src/bsp_driver_sd.c \
 ../Src/dac.c \
 ../Src/dma.c \
@@ -33,6 +34,7 @@ OBJS += \
 ./Src/ADXL345.o \
 ./Src/Communication.o \
 ./Src/adc.o \
+./Src/auto_treshold.o \
 ./Src/bsp_driver_sd.o \
 ./Src/dac.o \
 ./Src/dma.o \
@@ -59,6 +61,7 @@ C_DEPS += \
 ./Src/ADXL345.d \
 ./Src/Communication.d \
 ./Src/adc.d \
+./Src/auto_treshold.d \
 ./Src/bsp_driver_sd.d \
 ./Src/dac.d \
 ./Src/dma.d \

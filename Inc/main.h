@@ -55,7 +55,8 @@
 #include "stm32l4xx_hal.h"
 
 /* USER CODE BEGIN Includes */
-
+#include "consts.h"
+#include "auto_treshold.h"
 /* USER CODE END Includes */
 
 /* Private define ------------------------------------------------------------*/

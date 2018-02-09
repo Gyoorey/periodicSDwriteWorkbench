@@ -6,6 +6,8 @@ Src/fatfs.o: ../Src/fatfs.c \
  C:/Keil_v5/Projects/shooting/periodicSDwriteWorkbench/Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
  C:/Keil_v5/Projects/shooting/periodicSDwriteWorkbench/Inc/stm32l4xx_hal_conf.h \
  C:/Keil_v5/Projects/shooting/periodicSDwriteWorkbench/Inc/main.h \
+ C:/Keil_v5/Projects/shooting/periodicSDwriteWorkbench/Inc/consts.h \
+ C:/Keil_v5/Projects/shooting/periodicSDwriteWorkbench/Inc/auto_treshold.h \
  C:/Keil_v5/Projects/shooting/periodicSDwriteWorkbench/Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h \
  C:/Keil_v5/Projects/shooting/periodicSDwriteWorkbench/Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h \
  C:/Keil_v5/Projects/shooting/periodicSDwriteWorkbench/Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h \
@@ -68,6 +70,10 @@ C:/Keil_v5/Projects/shooting/periodicSDwriteWorkbench/Drivers/STM32L4xx_HAL_Driv
 C:/Keil_v5/Projects/shooting/periodicSDwriteWorkbench/Inc/stm32l4xx_hal_conf.h:
 
 C:/Keil_v5/Projects/shooting/periodicSDwriteWorkbench/Inc/main.h:
+
+C:/Keil_v5/Projects/shooting/periodicSDwriteWorkbench/Inc/consts.h:
+
+C:/Keil_v5/Projects/shooting/periodicSDwriteWorkbench/Inc/auto_treshold.h:
 
 C:/Keil_v5/Projects/shooting/periodicSDwriteWorkbench/Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:
 

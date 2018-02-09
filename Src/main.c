@@ -64,8 +64,6 @@
 /* USER CODE BEGIN Includes */
 #include "ADXL345.h"
 #include <string.h>
-#define USE_SD_CARD 1
-#define FATFS_MKFS_ALLOWED 1
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -82,12 +80,7 @@ typedef enum {
 HAL_SD_CardStatusTypedef status;
 uint32_t wbytes; /* File write counts */
 uint32_t byteswritten, bytesread;
-#define numOfSamples 32*1024u
-#define elementLength 2u
-#define bufferSize (elementLength*numOfSamples) //bytes
-#define numOfBufferWrites (5u*2u) //every minute -> 5*2*16KB
-#define micFileSize (numOfBufferWrites*bufferSize/2u) //bytes
-uint16_t adcBuffer[numOfSamples] = { 0 }; /* File write buffer */
+uint16_t adcBuffer[numOfMicSamples] = { 0 }; /* File write buffer */
 uint8_t *halfADCBuffer = (uint8_t *) adcBuffer + bufferSize / 2; //half of the buffer
 uint8_t workBuffer[_MAX_SS];
 uint8_t res;
@@ -112,8 +105,6 @@ uint16_t lt = 1500;
 uint16_t ht = 2500;
 
 //accelerometer
-#define numOfAccelSamples 512
-#define accelFileSize (numOfAccelSamples*elementLength*3u) //bytes: numOfAccelSamples*2B*[x,y,z]
 int16_t accelData[numOfAccelSamples][3] = { 0 };
 uint16_t accelCurrentPos = 0u;
 volatile uint8_t watermarkInt = 0u;
@@ -415,7 +406,7 @@ void startSDCard() {
 }
 
 HAL_StatusTypeDef startADC() {
-	if ((res = HAL_ADC_Start_DMA(&hadc1, (uint32_t*) &adcBuffer, numOfSamples))
+	if ((res = HAL_ADC_Start_DMA(&hadc1, (uint32_t*) &adcBuffer, numOfMicSamples))
 			!= HAL_OK) {
 		errorCode = (uint8_t) res;
 		Error_Handler();
@@ -547,7 +538,7 @@ FRESULT writeHalfBuffer(const void* startAddress) {
 	//__HAL_DMA_DISABLE_IT(hadc1.DMA_Handle, DMA_IT_HT);
 	//__HAL_DMA_DISABLE_IT(hadc1.DMA_Handle, DMA_IT_TC);
 	if ((errorCode = f_write(&micSDFile, startAddress,
-			(elementLength * numOfSamples) / 2, (void *) &wbytes)) == FR_OK) {
+			(elementLength * numOfMicSamples) / 2, (void *) &wbytes)) == FR_OK) {
 		return FR_OK;
 	} else {
 		Error_Handler();

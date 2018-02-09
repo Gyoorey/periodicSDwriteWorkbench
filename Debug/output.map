@@ -7575,6 +7575,41 @@ Discarded input sections
  .debug_macro   0x00000000      0x1d1 Src/adc.o
  .debug_macro   0x00000000       0xa5 Src/adc.o
  .debug_macro   0x00000000      0x325 Src/adc.o
+ .group         0x00000000        0x8 Src/auto_treshold.o
+ .group         0x00000000        0x8 Src/auto_treshold.o
+ .group         0x00000000        0x8 Src/auto_treshold.o
+ .group         0x00000000        0x8 Src/auto_treshold.o
+ .group         0x00000000        0x8 Src/auto_treshold.o
+ .group         0x00000000        0x8 Src/auto_treshold.o
+ .group         0x00000000        0x8 Src/auto_treshold.o
+ .text          0x00000000        0x0 Src/auto_treshold.o
+ .data          0x00000000        0x0 Src/auto_treshold.o
+ .bss           0x00000000        0x0 Src/auto_treshold.o
+ .text.init     0x00000000        0x4 Src/auto_treshold.o
+ .text.registerEvent
+                0x00000000        0x4 Src/auto_treshold.o
+ .text.getHt    0x00000000        0x4 Src/auto_treshold.o
+ .text.getLt    0x00000000        0x4 Src/auto_treshold.o
+ .debug_info    0x00000000      0x141 Src/auto_treshold.o
+ .debug_abbrev  0x00000000       0xa4 Src/auto_treshold.o
+ .debug_loc     0x00000000       0x21 Src/auto_treshold.o
+ .debug_aranges
+                0x00000000       0x38 Src/auto_treshold.o
+ .debug_ranges  0x00000000       0x28 Src/auto_treshold.o
+ .debug_macro   0x00000000       0x6d Src/auto_treshold.o
+ .debug_macro   0x00000000      0x8bc Src/auto_treshold.o
+ .debug_macro   0x00000000       0x22 Src/auto_treshold.o
+ .debug_macro   0x00000000       0x87 Src/auto_treshold.o
+ .debug_macro   0x00000000       0x51 Src/auto_treshold.o
+ .debug_macro   0x00000000       0xef Src/auto_treshold.o
+ .debug_macro   0x00000000       0x6a Src/auto_treshold.o
+ .debug_macro   0x00000000      0x1df Src/auto_treshold.o
+ .debug_line    0x00000000      0x345 Src/auto_treshold.o
+ .debug_str     0x00000000     0x3527 Src/auto_treshold.o
+ .comment       0x00000000       0x80 Src/auto_treshold.o
+ .debug_frame   0x00000000       0x50 Src/auto_treshold.o
+ .ARM.attributes
+                0x00000000       0x39 Src/auto_treshold.o
  .group         0x00000000        0x8 Src/bsp_driver_sd.o
  .group         0x00000000        0x8 Src/bsp_driver_sd.o
  .group         0x00000000        0x8 Src/bsp_driver_sd.o
@@ -10976,6 +11011,7 @@ LOAD Middlewares/Third_Party/FatFs/src/option/syscall.o
 LOAD Src/ADXL345.o
 LOAD Src/Communication.o
 LOAD Src/adc.o
+LOAD Src/auto_treshold.o
 LOAD Src/bsp_driver_sd.o
 LOAD Src/dac.o
 LOAD Src/dma.o
@@ -13301,7 +13337,7 @@ OUTPUT(periodicSDwriteWorkbench.elf elf32-littlearm)
  .debug_line    0x0002bce4      0xb03 Src/usbd_desc.o
  .debug_line    0x0002c7e7       0x7f startup/startup_stm32l476xx.o
 
-.debug_str      0x00000000   0x1120d4
+.debug_str      0x00000000   0x1120da
  .debug_str     0x00000000   0x104ba0 Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.o
                              0x1051b2 (size before relaxing)
  .debug_str     0x00104ba0      0xcad Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_adc.o
@@ -13386,33 +13422,33 @@ OUTPUT(periodicSDwriteWorkbench.elf elf32-littlearm)
                              0x10463d (size before relaxing)
  .debug_str     0x001115d2       0x24 Src/i2c.o
                              0x104b5d (size before relaxing)
- .debug_str     0x001115f6      0x4bf Src/main.o
-                             0x108a5d (size before relaxing)
- .debug_str     0x00111ab5       0x35 Src/opamp.o
+ .debug_str     0x001115f6      0x4c5 Src/main.o
+                             0x108a63 (size before relaxing)
+ .debug_str     0x00111abb       0x35 Src/opamp.o
                              0x10489a (size before relaxing)
- .debug_str     0x00111aea       0x17 Src/rng.o
+ .debug_str     0x00111af0       0x17 Src/rng.o
                              0x1046cc (size before relaxing)
- .debug_str     0x00111b01       0x17 Src/rtc.o
+ .debug_str     0x00111b07       0x17 Src/rtc.o
                              0x1049a8 (size before relaxing)
- .debug_str     0x00111b18       0x90 Src/sd_diskio.o
+ .debug_str     0x00111b1e       0x90 Src/sd_diskio.o
                              0x104e8a (size before relaxing)
- .debug_str     0x00111ba8       0x18 Src/sdmmc.o
+ .debug_str     0x00111bae       0x18 Src/sdmmc.o
                              0x104a76 (size before relaxing)
- .debug_str     0x00111bc0       0x1b Src/stm32l4xx_hal_msp.o
+ .debug_str     0x00111bc6       0x1b Src/stm32l4xx_hal_msp.o
                              0x104a90 (size before relaxing)
- .debug_str     0x00111bdb       0xa1 Src/stm32l4xx_it.o
+ .debug_str     0x00111be1       0xa1 Src/stm32l4xx_it.o
                              0x105110 (size before relaxing)
- .debug_str     0x00111c7c       0x50 Src/system_stm32l4xx.o
+ .debug_str     0x00111c82       0x50 Src/system_stm32l4xx.o
                              0x10461d (size before relaxing)
- .debug_str     0x00111ccc       0x1c Src/tim.o
+ .debug_str     0x00111cd2       0x1c Src/tim.o
                              0x104f8b (size before relaxing)
- .debug_str     0x00111ce8       0x68 Src/usb_device.o
+ .debug_str     0x00111cee       0x68 Src/usb_device.o
                              0x105a47 (size before relaxing)
- .debug_str     0x00111d50       0xa7 Src/usbd_cdc_if.o
+ .debug_str     0x00111d56       0xa7 Src/usbd_cdc_if.o
                              0x10567e (size before relaxing)
- .debug_str     0x00111df7       0x7c Src/usbd_conf.o
+ .debug_str     0x00111dfd       0x7c Src/usbd_conf.o
                              0x1065eb (size before relaxing)
- .debug_str     0x00111e73      0x261 Src/usbd_desc.o
+ .debug_str     0x00111e79      0x261 Src/usbd_desc.o
                              0x1051e6 (size before relaxing)
 
 .comment        0x00000000       0x7f
